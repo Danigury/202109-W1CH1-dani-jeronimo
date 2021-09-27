@@ -1,0 +1,319 @@
+html {
+    padding-bottom: 72px;
+    background-color: none;
+}
+
+body {
+    background: rgb(9, 122, 235);
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.623);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 15px auto;
+
+}
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    font-size: 28px;
+}
+
+li {
+
+    border-radius: 50%;
+    display: block;
+    width: 2.25em;
+    height: 2.25em;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-image: none;
+    color: white;
+    line-height: 2.25em;
+    text-align: center;
+    text-decoration: none;
+    margin: 1px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+button {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: rgb(9, 122, 235);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.623);
+}
+
+input {
+    height: 28px;
+    font-size: 17px;
+    font-family: 'Lexend Deca',
+        sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 0.3fr 2.6fr 0.1fr;
+    grid-template-rows: 0.4fr 0.6fr 2fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "titulo titulo titulo"
+        "rosco rosco rosco"
+        "contadores zona-baja .";
+}
+
+/* TÍTULO Y NOMBRE*/
+.titulo {
+    grid-area: titulo;
+}
+
+#userName {
+    border-style: solid;
+    width: max-content;
+    align-content: center;
+    border-left: none;
+    border-right: none;
+    margin: 10px auto;
+}
+
+/* ROSCO */
+.rosco {
+    grid-area: rosco;
+    background-color: none;
+}
+
+.letra-acertada {
+    background-color: rgb(160, 219, 40);
+}
+
+.letra-erronea {
+    background-color: rgb(223, 51, 51);
+}
+
+/* ZONA PREGUNTA */
+
+.zona-baja {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.3fr 0.6fr 1.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "zona-pregunta zona-pregunta zona-pregunta"
+        "zona-correccion zona-correccion zona-correccion"
+        "zona-botones zona-botones zona-botones";
+    grid-area: zona-baja;
+    background-color: none;
+}
+
+.zona-pregunta {
+    grid-area: zona-pregunta;
+    justify-content: center;
+    padding-top: 0px;
+    background-color: none;
+}
+
+.pregunta {
+    font-size: 20px;
+    margin: 0px 20px 20px 20px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/* BOTONES */
+.zona-botones {
+    visibility: hidden;
+    grid-area: zona-botones;
+    justify-content: center;
+    display: flex;
+}
+
+.boton-jugar {
+    justify-content: center;
+    font-size: 20px;
+    background-color: rgb(255, 123, 0);
+    visibility: visible;
+}
+
+.boton-jugar:hover {
+    background-color: white;
+    color: rgb(255, 123, 0);
+}
+
+.boton-respuesta,
+.boton-pasapalabra,
+.boton-finalizar {
+    font-size: 17px;
+    background-color: none;
+
+}
+
+.boton-respuesta:hover,
+.boton-pasapalabra:hover {
+    background-color: white;
+    color: rgb(8, 113, 218);
+}
+
+.boton-finalizar {
+    background-color: rgb(255, 123, 0);
+}
+
+.boton-finalizar:hover {
+    background-color: white;
+    color: rgb(255, 123, 0);
+}
+
+.botones-superiores {
+    visibility: hidden;
+}
+
+.boton-juego-nuevo,
+.boton-ranking {
+
+    justify-content: center;
+    font-size: 17px;
+    background-color: rgb(40, 165, 82);
+}
+
+.boton-juego-nuevo:hover,
+.boton-ranking:hover {
+    background-color: white;
+    color: rgb(40, 165, 82);
+}
+
+.boton-continuar {
+    background-color: rgb(255, 123, 0);
+    font-size: 17px;
+}
+
+.boton-continuar:hover {
+    background-color: white;
+    color: rgb(255, 123, 0);
+}
+
+/* CORRECCIÓN */
+.zona-correccion {
+    grid-area: zona-correccion;
+    visibility: hidden;
+}
+
+.palabra-correcta {
+    font-size: 15px;
+    margin: 50px 100px 20px 100px;
+}
+
+/* MARCARDORES */
+.contadores {
+    grid-area: contadores;
+    margin-top: 45px;
+}
+
+.contador-cuenta-atras {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+}
+
+.contador-respuestas-acertadas {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+}
+
+.contador-palabras-restantes {
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+}
+
+#cuenta-atras,
+#respuestas-acertadas {
+    border: white;
+    border: 2px solid white;
+    width: 1.50em;
+    height: 1.50em;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 0;
+}
+
+#cuenta-atras {
+    width: 2.75em;
+}
+
+#palabras-restantes {
+    border: white;
+    border: 2px solid white;
+    width: 3.15em;
+    height: 1.50em;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#respuestas-acertadas {
+    background-color: rgb(160, 219, 40);
+    margin-top: 0;
+    width: 2.25em;
+    margin-top: 20px;
+}
+
+#cuenta-atras-titulo,
+#respuestas-acertadas-titulo,
+#palabras-restantes-titulo {
+    text-align: center;
+    margin: 0px;
+    padding: 5px;
+}
+
+#cuenta-atras-titulo {
+    padding-left: 0px;
+    padding-top: 44px;
+}
+
+#palabras-restantes-titulo {
+    padding-left: 0px;
+    padding-top: 25px;
+}
+
+#respuestas-acertadas-titulo {
+    padding-top: 35px;
+    padding-left: 15px;
+}
+
+/* RANKING */
+.ranking-nombres {
+    font-size: 20px;
+    margin: 20px 20px 20px 20px;
+    margin-bottom: 10px;
+    background-color: none;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasapalabra-DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap" rel="stylesheet">
+    <script src="jquery-3.6.0.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <section class="juego">
+        <div class="container">
+            <div class="titulo">
+                <h1>
+                    PASAPALABRA
+                </h1>
+                <h2 id="userName">userName</h2>
+            </div>
+            <div class="rosco">
+                <ul class="letras-rosco">
+                    <li class="letra" id="a">A</li>
+                    <li class="letra" id="b">B</li>
+                    <li class="letra" id="c">C</li>
+                    <li class="letra" id="d">D</li>
+                    <li class="letra" id="e">E</li>
+                    <li class="letra" id="f">F</li>
+                    <li class="letra" id="g">G</li>
+                    <li class="letra" id="h">H</li>
+                    <li class="letra" id="i">I</li>
+                    <li class="letra" id="j">J</li>
+                    <li class="letra" id="k">K</li>
+                    <li class="letra" id="l">L</li>
+                    <li class="letra" id="m">M</li>
+                    <li class="letra" id="n">N</li>
+                </ul>
+                <ul class="letras-rosco">
+                    <li class="letra" id="ñ">Ñ</li>
+                    <li class="letra" id="o">O</li>
+                    <li class="letra" id="p">P</li>
+                    <li class="letra" id="q">Q</li>
+                    <li class="letra" id="r">R</li>
+                    <li class="letra" id="s">S</li>
+                    <li class="letra" id="t">T</li>
+                    <li class="letra" id="u">U</li>
+                    <li class="letra" id="v">V</li>
+                    <li class="letra" id="w">W</li>
+                    <li class="letra" id="x">X</li>
+                    <li class="letra" id="y">Y</li>
+                    <li class="letra" id="z">Z</li>
+                </ul>
+            </div>
+            <div class="contadores">
+                <div class="contador-cuenta-atras">
+                    <p id="cuenta-atras">190</p>
+                    <p id="cuenta-atras-titulo">Tiempo restante</p>
+                </div>
+                <div class="contador-palabras-restantes">
+                    <p id="palabras-restantes">27</p>
+                    <p id="palabras-restantes-titulo">Palabras restantes</p>
+                </div>
+                <div class="contador-respuestas-acertadas">
+                    <p id="respuestas-acertadas">0</p>
+                    <p id="respuestas-acertadas-titulo">Aciertos</p>
+                </div>
+            </div>
+            
+            <div class="zonabaja">
+                <div class="zona-correccion">
+                    <p class="palabra-correcta">
+                        Lorem ipsum dolor
+                    </p>
+                    <button class="boton-continuar">CONTINUAR</button>
+                </div>
+                <div class="zona-pregunta">
+                    <p class="pregunta">
+                        Bienvenida/o a PASAPALABRA. El juego es sencillo, se van a mostrar unas deficiones en la
+                        pantalla y
+                        deberás responder con la
+                        palabra correcta. Puedes clickar PASAPALABRA si tienes dudas y quieres responder más tarde.
+                        Haz click en JUGAR! para empezar.
+                    </p>
+                    <div class="ranking-nombres"></div>
+                </div>
+                <div class="botones-superiores">
+                    <button class="boton-juego-nuevo">JUGAR DE NUEVO</button> <br>
+                    <button class="boton-ranking">RANKING</button>
+                </div>
+                <button class="boton-jugar">JUGAR!</button>
+                <div class="zona-botones">
+                    <form class="formulario" action="#">
+                        <input class="respuesta" type="text" placeholder="Respuesta...">
+                        <button class="boton-respuesta" type="submit" value="RESPONDER">RESPONDER</button>
+                    </form>
+                    <button class="boton-pasapalabra">
+                        PASAPALABRA!
+                    </button>
+                    <button class="boton-finalizar">FINALIZAR</button>
+
+
+                </div>
+
+
+    </section>
+
+
+    <script src="pasapalabra.js"></script>
+</body>
+
+</html>
